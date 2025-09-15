@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .account
+    h1= title
+    .table 
+      if products.length
+        table(border="1")
+          tr
+            th ID
+            th First Name
+            th Last Name
+            th Date of Training
+            th Date of Booking
+            th Actions
+          each product in products
+            tr
+              td= product.shortId
+              td= product.fname
+              td= product.lname
+              td= product.formattedDate
+              td= product.createdAtFormatted
+              td
+                .manage
+                  a(href='/account/modify/' + product._id) Modify
+      else
+        p No bookings found.
+        .layout
+          a(href='/book') Book a training session

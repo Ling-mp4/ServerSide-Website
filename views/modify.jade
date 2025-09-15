@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .layout
+    h1=title
+    .form 
+      form(action='/account/modify/' + product._id, method="post")
+        label(for="fname") 
+        b First Name
+        br
+        input(type="text", name="fname", value=product.fname)
+        br
+        br
+
+        label(for="lname") 
+        b Last Name
+        br
+        input(type="text", name="lname", value=product.lname)
+        br
+        br
+
+        label(for="date") 
+        b Date of Training
+        br
+        input(type="date", name="date", id='dateInput' value=product.date.toISOString().slice(0,10), )
+        br
+        br
+        button(type="submit") Save Changes
+
+      form(action='/account/delete/' + product._id, method="post", onsubmit="return confirm('Are you sure you want to delete this session?');")
+        button(type="submit") Delete Training Session
+
+  script.
+    const dateInput = document.getElementById('dateInput');
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; // Format as yyyy-mm-dd
+    dateInput.min = formattedDate;

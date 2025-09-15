@@ -1,0 +1,74 @@
+extends layout
+
+block content
+  .layout
+    h1= title
+    .form
+      form(action='/book/save' method='post')
+        label(for='fname') 
+        b First name 
+        br
+        input(type='text' placeholder='Enter first name' name='fname' required)
+        br
+        br
+
+        label(for='lname') 
+        b Last name 
+        br
+        input(type='text' placeholder='Enter last name' name='lname' required)
+        br
+        br
+
+        label(for='date')
+        b Date of training 
+        br
+        input(type='date' name='date' id='dateInput' required)
+        br
+        br
+
+        .payment
+          label(for='fname') 
+            b Name on card 
+            br
+            input(type='text' placeholder='Enter name' name='cardname' required)
+            br
+            br
+
+            b Card number 
+            input(type='tel' inputmode="numeric" pattern='[0-9\s]{13,19}' placeholder='Enter number' name='cardno' maxlength="19" required)
+            br
+            br
+
+            .book-row
+              .expiry
+                b Expiry date 
+                br
+                input(type='month' name='carddate' required)
+              
+            
+              .CVV
+                b CVV 
+                br
+                input(type='tel' inputmode="numeric" max='999' placeholder='CVV' name='cardCVV' maxlength="3" required)
+            
+            button(type='submit') Submit
+
+    p Want to see already made bookings?
+    a(href='/account') Click here!
+
+  script.
+    window.onload = function() {
+        const success = new URLSearchParams(window.location.search);
+        if (success.has('success')) {
+          alert('Booking was successfully submitted!');
+            }
+
+    const dateInput = document.getElementById('dateInput');
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; // Format as yyyy-mm-dd
+    dateInput.min = formattedDate;
+      }
+      
+
+
+

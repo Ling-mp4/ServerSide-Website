@@ -1,0 +1,316 @@
+html {
+  background-color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    border-bottom: solid;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.logo img { 
+  height: 80px;
+  width: 150px;
+  float: left;
+}
+.nav {
+  padding-top: 20px
+}
+a.nav{
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  padding: 15px;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown img {
+  height: 10px;
+}
+
+.dropcontent {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: gainsboro;
+  text-align: center;
+}
+.dropcontent a {
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: black;
+  line-height: 30px;
+}
+.dropdownbutton {
+  padding-right: 5px;
+}
+
+.dropcontent a:hover {
+  background-color: grey;
+}
+
+.dropdown:hover .dropcontent {
+  display: block;
+}
+.dropdown:hover .dropdownbutton {
+  background-color: gainsboro;
+  
+}
+
+a.nav:hover{
+  background-color: gainsboro;
+}
+
+footer {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.index{
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: larger;
+}
+.row {
+  display: flex;
+  padding-top: 5%;
+}
+.index-p{
+  padding: 2%;
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  text-align: center;
+  
+  width: 50%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.index-img img {
+  float: right;
+  height: 425px;
+  width: auto;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.coach-img img{
+  float: left;
+  border-radius: 10px 0px 0px 10px;
+  width: 850px;
+  
+}
+.coach-text {
+  padding: 2.5%;
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  text-align: center;
+  width: 50%;
+  border-radius: 0px 10px 10px 0px;
+  
+}
+
+.getstarted{
+  padding-top: 2%;
+  text-align: center;
+}
+
+
+.ready {
+  padding-top: 2%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 2%;
+}
+
+.ready-box {
+  background-color: #3b3a3a;
+  height: 400px;
+  border-radius: 100%;
+}
+
+.ready-text{
+  text-align: center;
+  color: rgb(163, 163, 163);
+  padding-top: 15%;
+  font-size: xx-large;
+}
+
+.getstarted a {
+  background-color: rgb(163, 163, 163);
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+
+}
+
+.getstarted a:hover {
+  background-color: white;
+}
+
+.about{
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+  font-size: larger;
+}
+
+
+.circle1 {
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  padding: 4%;
+  border-radius: 50%;
+
+}
+
+.circle2 {
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  padding: 4%;
+  border-radius: 50%;
+}
+
+.circle3 {
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  padding: 4%;
+  border-radius: 50%;
+}
+
+.layout{
+  font-size: x-large;
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: center;
+}
+.form {
+  text-align: left;
+  color: white;
+  background-color: #3b3a3a;
+  padding: 2%;
+  border-radius: 10px;
+}
+input[type=text], input[type=password], input[type="tel"]{
+  width: 80%;
+  padding: 10px;
+}
+input[type=date]{
+  padding: 5px;
+}
+.payment {
+  border-top: solid;
+  padding-top: 10px;
+}
+
+.layout button{
+  background-color: rgb(163, 163, 163);
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.layout button:hover {
+  background-color: white;
+}
+
+.layout a {
+  background-color: rgb(163, 163, 163);
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border: solid;
+}
+.layout a:hover {
+  background-color: white;
+}
+
+.account {
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+
+.table {
+  background-color: #3b3a3a;
+  text-align: center;
+  padding: 2%;
+  border-radius: 10px;
+}
+.account h1{
+  text-align: center;
+}
+
+.account table {
+  width: 100%;
+  color:rgb(163, 163, 163);
+  background-color: #3b3a3a;
+  font-size: x-large;
+  border-radius: 10px;
+}
+
+.account button:hover {
+  background-color: white;
+}
+
+.help {
+  padding-top: 5%;
+  padding-left: 35%;
+  padding-right: 35%;
+  padding-bottom: 5%;
+}
+.help-text {
+  background-color: #3b3a3a;
+  color: rgb(163, 163, 163);
+  padding: 5%;
+  border-radius: 10px;
+}
+.help-text h1 {
+  text-align: center;
+}
+.help-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.book-row {
+  display: flex;
+}
+.CVV {
+  width: 50%;
+  float: right;
+}
+
+.expiry{
+  width: 50%;
+
+}
+.expiry input {
+  padding: 5px;
+  width: 50%;
+}
+.table tr{
+  color: rgb(163, 163, 163);
+}
+
+.manage a{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(163, 163, 163);
+  border-radius: 10px;
+  padding: 2px;
+  border: solid 1px;
+}
+.manage a:hover{
+  background-color: white;
+}

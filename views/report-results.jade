@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .account
+    h1= title
+    .table
+      if products.length
+        table(border="1")
+          tr
+            th ID
+            th First Name
+            th Last Name
+            th Date of Training
+            th Date of Booking
+          each product in products
+            tr
+              td= product.shortId
+              td= product.fname
+              td= product.lname
+              td= product.formattedDate
+              td= product.createdAtFormatted
+      else
+        p No training sessions found for the specified user and date range.
+        .layout
+          a(href='/report') Create a new report

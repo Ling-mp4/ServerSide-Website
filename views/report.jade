@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .layout
+    h1=title 
+    .form
+      form(action='/report', method='post')
+        label(for='fname')
+        b First Name:
+        br
+        input(type='text', name='fname', placeholder='Enter first name', required)
+        br
+        br
+
+        label(for='lname')
+        b Last Name:
+        br
+        input(type='text', name='lname', placeholder='Enter last name', required)
+        br
+        br
+
+        .book-row  
+          label(for='startDate') 
+          b Start Date:
+          input(type='date', name='startDate', required)
+          
+          label(for='endDate') 
+          b End Date:
+          input(type='date', name='endDate', required)
+        br
+        button(type='submit') Generate Report

@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Fitness Trainer
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='icon', href='images/icon.png')
+  body
+    header
+      .logo
+        a(href='/')
+          img(src='/images/icon.png', alt='logo')
+      .nav   
+        &emsp;
+        &emsp;
+        .dropdown
+          .dropdownbutton
+            a.nav(href='/book') Book training session
+            img(src="/images/arrow.png", alt="arrow")
+          .dropcontent 
+            a(href='/account') Manage Account
+            br
+            a(href='/report') Create Report
+        &emsp;
+        a.nav(href='/about') About
+        &emsp;
+        a.nav(href='/help') Help
+
+    block content
+
+    footer
+      p &copy; Arthur Ryskulov - R00244527 - Server Side Phase 1 Project
