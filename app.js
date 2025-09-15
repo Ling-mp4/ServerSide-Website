@@ -50,7 +50,6 @@ app.use('/account', accountRouter);//account router at localhost:3000/account
 app.use('/report', reportRouter);
 //////////////////////////////////
 
-// const url = "mongodb+srv://arthurryskulov:pr10YhxyVxObNw69@cluster0.ef4bc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const url = "mongodb://localhost:27017";
 const connect = mongoose.connect(url);
 
